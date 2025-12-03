@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Quiz de Rotina</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      background-color: #dcd5cf;
+    }
+
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      background: #dcd5cf;
+      color: #1b0a02;
+      text-align: center;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 1vw 1vw 1vw 1vw;
+      align-items: center;
+      background-color: #1b0a02;
+    }
+
+    header nav ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    header nav li {
+      margin: 0px 10px 0px 10px;
+    }
+
+    header nav a {
+      color: #7f7e5c;
+      display: block;
+      border: 2px solid #b4b383;
+      border-radius: 20px;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    header nav a:hover {
+      background-color: #b4b383;
+      color: #1b0a02;
+    }
+
+    header a.marcado {
+      border: 2px solid #b4b383;
+      background-color: #683d049c;
+      color: #ffffff;
+      border-radius: 20px;
+      display: block;
+      padding: 10px 20px;
+    }
+
+    .caixa {
+      max-width: 850px;
+      margin: auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #1b0a02;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .caixa>p {
+      margin-bottom: 20px;
+      color: #7f7e5c;
+      text-align: center;
+    }
+
+    .pergunta {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #b4b383;
+      /* Borda da paleta */
+      text-align: center;
+    }
+
+    .titulo-pergunta {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #1b0a02;
+      text-align: center;
+    }
+
+    .opcoes label {
+      display: block;
+      margin: 5px 0;
+      color: #7f7e5c;
+      text-align: center;
+    }
+
+    .botoes {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: 2px solid #b4b383;
+      cursor: pointer;
+      background-color: #ffffff;
+      color: #1b0a02;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b4b383;
+      color: #ffffff;
+    }
+
+    .botao-principal {
+      background: #1b0a02;
+      color: #b4b4a2;
+    }
+
+    .botao-principal:hover {
+      background: #683d049c;
+      color: #ffffff;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f7f3aa;
+      border: 1px solid #b4b383;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .escondido {
+      display: none;
+    }
+
+    footer {
+      background-color: #1b0a02;
+      color: #b4b4a2;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+    }
+
+    footer img {
+      width: 30px;
+      vertical-align: middle;
+    }
+
+
+    @media (min-width: 769px) and (max-width: 1199px) {
+      header nav {
+        padding: 2vw;
+      }
+
+      header nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header nav li {
+        margin: 5px 0;
+      }
+
+      header nav a,
+      header a.marcado {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+
+      .caixa {
+        padding: 20px;
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .titulo-pergunta {
+        font-size: 1.1rem;
+      }
+
+      .opcoes label {
+        font-size: 0.9rem;
+      }
+
+      button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+
+      .botoes {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      footer {
+        padding: 15px 5px;
+      }
+
+      footer img {
+        width: 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header nav {
+        flex-direction: column;
+        padding: 2vw;
+      }
+
+      header nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header nav li {
+        margin: 5px 0;
+      }
+
+      header nav a,
+      header a.marcado {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+      }
+
+      body {
+        padding: 10px;
+      }
+
+      .caixa {
+        padding: 15px;
+        max-width: 100%;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .caixa>p {
+        font-size: 0.9rem;
+      }
+
+      .titulo-pergunta {
+        font-size: 1rem;
+      }
+
+      .opcoes label {
+        font-size: 0.85rem;
+      }
+
+      button {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+      }
+
+      .botoes {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .resultado {
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        padding: 10px 5px;
+        margin-top: 20px;
+      }
+
+      footer img {
+        width: 20px;
+      }
+
+      footer p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">VIDA DISCIPLINADA E
+            ORGANIZADA PARA<br>
+            ADOLESCENTES</a>
+        </li>
+        <li>
+          <a href="pag2.html">CORPO EM MOVIMENTO</a>
+        </li>
+        <li>
+          <a href="pag3.html">ESTUDO EFICIENTE</a>
+        </li>
+        <li>
+          <a href="pag4.html">ROTINA & ORGANIZAÇÃO</a>
+        </li>
+        <li>
+          <a href="pag5.html">FÉ, RELACIONAMENTOS & TRABALHO</a>
+        </li>
+        <li>
+          <a href="sobre.html">SOBRE NÓS</a>
+        </li>
+        <li>
+          <a href="form.html" class="marcado">FORMULÁRIO</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="caixa">
+
+    <h1>Quiz sobre rotina, equilíbrio e hábitos</h1>
+    <p>Responda todas as 10 perguntas para receber uma análise personalizada.</p>
+
+    <form id="formularioQuiz">
+
+    
+
+      <div class="pergunta" id="p1">
+        <div class="titulo-pergunta">1. Como você avalia sua rotina no geral?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p1" value="1"> Bem organizada e estável.</label>
+          <label><input type="radio" name="p1" value="2"> Equilibrada, mas com alguns desafios.</label>
+          <label><input type="radio" name="p1" value="3"> Bastante instável em várias áreas.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p2">
+        <div class="titulo-pergunta">2. Quando algo foge do planejado, como você reage?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p2" value="1"> Me adapto bem e retomo rápido.</label>
+          <label><input type="radio" name="p2" value="2"> Me ajusto, mas às vezes perco o foco.</label>
+          <label><input type="radio" name="p2" value="3"> Tenho dificuldade para voltar ao ritmo.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p3">
+        <div class="titulo-pergunta">3. Qual área é mais desafiadora atualmente?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p3" value="1"> Estudos</label>
+          <label><input type="radio" name="p3" value="2"> Relacionamentos</label>
+          <label><input type="radio" name="p3" value="3"> Saúde</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p4">
+        <div class="titulo-pergunta">4. Como estão seus hábitos diários?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p4" value="1"> Tenho horários definidos.</label>
+          <label><input type="radio" name="p4" value="2"> Tenho alguns hábitos, mas falho às vezes.</label>
+          <label><input type="radio" name="p4" value="3"> Não consigo manter constância.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p5">
+        <div class="titulo-pergunta">5. Como você avalia sua produtividade?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p5" value="1"> Alta.</label>
+          <label><input type="radio" name="p5" value="2"> Moderada.</label>
+          <label><input type="radio" name="p5" value="3"> Baixa.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p6">
+        <div class="titulo-pergunta">6. Sobre sua motivação diária:</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p6" value="1"> Bem constante.</label>
+          <label><input type="radio" name="p6" value="2"> Oscila bastante.</label>
+          <label><input type="radio" name="p6" value="3"> Tenho dificuldade para me motivar.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p7">
+        <div class="titulo-pergunta">7. Você consegue equilibrar estudo, descanso e vida pessoal?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p7" value="1"> Sim.</label>
+          <label><input type="radio" name="p7" value="2"> Às vezes.</label>
+          <label><input type="radio" name="p7" value="3"> Não consigo no momento.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p8">
+        <div class="titulo-pergunta">8. Como você descreveria sua disciplina?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p8" value="1"> Boa.</label>
+          <label><input type="radio" name="p8" value="2"> Mediana.</label>
+          <label><input type="radio" name="p8" value="3"> Baixa.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p9">
+        <div class="titulo-pergunta">9. Como está sua energia ao longo do dia?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p9" value="1"> Estável.</label>
+          <label><input type="radio" name="p9" value="2"> Irregular.</label>
+          <label><input type="radio" name="p9" value="3"> Baixa.</label>
+        </div>
+      </div>
+
+      <div class="pergunta" id="p10">
+        <div class="titulo-pergunta">10. Você planeja sua semana?</div>
+        <div class="opcoes">
+          <label><input type="radio" name="p10" value="1"> Sim, com antecedência.</label>
+          <label><input type="radio" name="p10" value="2"> Às vezes.</label>
+          <label><input type="radio" name="p10" value="3"> Não planejo.</label>
+        </div>
+      </div>
+
+      <div class="botoes">
+        <button type="button" id="botaoResultado" class="botao-principal">Ver resultado</button>
+        <button type="button" id="botaoLimpar">Limpar</button>
+      </div>
+
+    </form>
+
+    <div id="caixaResultado" class="resultado escondido"></div>
+
+  </div>
+
+  <script>
+    function obterValorPergunta(nomePergunta) {
+      const selecionado = document.querySelector(`input[name="${nomePergunta}"]:checked`);
+      return selecionado ? selecionado.value : null;
+    }
+
+    function converterPontuacao(valor) {
+      if (valor === "1") return 3;
+      if (valor === "2") return 2;
+      if (valor === "3") return 1;
+      return 0;
+    }
+
+    function calcularPontuacaoFinal() {
+      let soma = 0;
+
+      for (let i = 1; i <= 10; i++) {
+        const resposta = obterValorPergunta(`p${i}`);
+        if (!resposta) return null;
+        soma += converterPontuacao(resposta);
+      }
+
+      return soma;
+    }
+
+    function gerarPerfil(pontos) {
+      if (pontos >= 25) {
+        return `
+      <strong>Perfil 1 — Rotina muito organizada</strong>
+      <p>Sua rotina apresenta um grande nível de organização, mostrando um alto nível de maturidade e estabilidade, junto a um ambiente favorável a esse desenvolvimento. Manter padrões consistentes melhora o funcionamento da nossa mente, nos trazendo uma rotina sólida e funcional. Busque avaliar em sua rotina quais métodos trouxeram maior desenvoltura, e busque planejar respostas que possam ser utilizadas quando as coisas saírem do controle.
+</p>    `;
+      }
+
+      if (pontos >= 20) {
+        return `
+      <strong>Perfil 2 — Rotina estável com pequenos ajustes</strong>
+      <p>Você apresenta uma rotina equilibrada, e isso já traz benefícios importantes. Entretanto, pequenos ajustes podem tornar sua vida mais funcional e otimizada. Micro-Hábitos, quando bem distribuídos, auxiliam na regulação do sono, na qualidade do foco e na prevenção do desgaste emocional. Comece planejando sua rotina de maneira consciente e busque aderir a revisões semanais e horários fixos para tarefas específicas e pausas estruturadas, que reduzem os riscos de estresse e melhoram o autocontrole.
+</p>
+    `;
+      }
+
+      if (pontos >= 15) {
+        return `
+      <strong>Perfil 3 — Rotina irregular</strong>
+      <p>Sua rotina já apresenta aspectos positivos, mas a falta de consistência ainda impacta diretamente sua saúde mental e física. Quando os hábitos não estão firmes, o cérebro TENDE a entrar em ciclos de esforço excessivo, o que contribui para ansiedade, fadiga e perda de foco.
+É crucial considerar que a construção de hábitos deve ser feita de forma gradual e consciente, utilizando mecanismos que priorizem um desenvolvimento mental que não resulte na exaustão. Neste sentido, valorize os métodos apresentados neste site que prezam por essa abordagem.
+“Só existe uma maneira de aprender – Respondeu o Alquimista – é através da ação”
+
+</p>
+    `;
+      }
+
+      return `
+    <strong>Perfil 4 — Rotina instável</strong>
+    <p>O seu quadro descreve um padrão de vida marcado pela falta de previsibilidade, inconsistência de horários e dificuldade em manter compromissos de longo prazo. Essa instabilidade frequentemente é um sintoma ou um catalisador de hábitos prejudiciais.
+Para esse perfil, a busca por auxílio clínico não é apenas recomendada, é um passo fundamental para restabelecer a saúde e a autonomia.
+Em uma conversa com a Doutora em Psicologia pela UFSC, irmã deste que vos escreve, Renan Campos, destacou que:
+"Em última análise, a atuação clínica é a chave-mestra, responsável pelo auxílio e suporte do indivíduo e seus processos, fundamental para a construção e a manutenção de uma rotina de sucesso."
+Para iniciar seu acompanhamento psicológico na rede pública de saúde, consulte os órgãos responsáveis em seu município.
+
+</p>
+  `;
+    }
+
+
+    document.getElementById("botaoResultado").addEventListener("click", function () {
+      const pontos = calcularPontuacaoFinal();
+      const caixaResultado = document.getElementById("caixaResultado");
+
+      if (pontos === null) {
+        caixaResultado.classList.remove("escondido");
+        caixaResultado.innerHTML = "<strong>Responda todas as perguntas para ver o resultado.</strong>";
+        return;
+      }
+
+      caixaResultado.classList.remove("escondido");
+      caixaResultado.innerHTML = gerarPerfil(pontos);
+    });
+
+    document.getElementById("botaoLimpar").addEventListener("click", function () {
+      document.getElementById("formularioQuiz").reset();
+      document.getElementById("caixaResultado").classList.add("escondido");
+    });
+  </script>
+
+<footer>
+
+  <p><span> Oganização é o fruto de um caos controlado</span></p>
+  <p>© Alguns direitos reservados 2025</p>
+  <p>Informações para contato</p>
+  <p>
+    <img src="images/e-mail.png" alt="">projetoecdiseG@gmail.com
+  </p>
+
+  <p>
+    <a href="https://www.instagram.com/projetoecdise "><img src="images/Instagram.png" alt="instagramLogo"></a>
+  </p>
+</footer>
+</body>
+
+
+
+</html>

@@ -1,0 +1,331 @@
+html {
+    background-color: #dcd5cf;
+}
+
+a {
+    text-decoration: none;
+}
+header nav a:hover {
+      background-color: #b4b383;
+      color: #1b0a02;
+    }
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 1vw 1vw 1vw;
+    align-items: center;
+    background-color: #1b0a02;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav li {
+    margin: 0px 10px 0px 10px;
+}
+
+header nav a {
+    color: #7f7e5c;
+    display: block;
+    border: 2px solid #b4b383;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+header a.marcado {
+    border: 2px solid #b4b383;
+    background-color: #683d049c;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: block;
+    padding: 10px 20px;
+}
+
+/*=============index============*/
+section.banner {
+    background: url(../images/fundo1.png);
+    background-size: cover;
+    margin: 0px 0px 0px 0px;
+    padding: 10vw;
+    text-align: center; 
+}
+
+section.banner h1 span {
+    color: #f8f5ea;
+    margin: 20px 80px;
+    font-size: 5vw;
+}
+
+section.banner img {
+    max-width: 20%;
+    border-radius: 30%;
+}
+
+
+
+section.introducao {
+    margin: 50px 100px;
+}
+
+section.introducao h2 {
+    font-size: 3vw;
+    margin: 100px 100px;
+}
+
+section.introducao div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 100px;
+    gap: 20px;
+}
+
+section.introducao span p {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #7f7e5c;
+}
+
+section.introducao p {
+    padding: 10px 5px;
+    font-size: 1.3rem;
+}
+
+section.introducao img {
+    border-radius: 10vw;
+    max-width: 100%; 
+}
+
+.motivacao {
+    min-height: 80vh;
+    background-color: #8B4513;
+    background-image: url(../images/background2.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.motivacao-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 90vw;
+}
+
+.texto-grande {
+    font-family: 'SuaFonteAqui', sans-serif;
+    font-size: 8vw;
+    color: #fbf7ba;
+    line-height: 0.9;
+    text-align: right;
+    white-space: pre-line;
+    margin: 0;
+}
+
+.imagem-e-disciplina {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+}
+
+.imagem-e-disciplina img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.disciplina-cursiva {
+    font-size: 10vw;
+    color: #fbf7ba;
+    position: absolute;
+    bottom: 5%;
+    right: 100%;
+    margin: 0;
+}
+
+section.disc {
+    margin: 50px 100px;
+}
+
+section.disc h2 {
+    font-size: 3vw;
+    padding-bottom: 10rem;
+}
+
+section.disc img {
+    max-width: 50%;
+    padding: 30px 30px;
+}
+
+section.disc div {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.disc p {
+    font-size: 2rem;
+}
+
+section.disc span {
+    color: #7f7e5c;
+}
+
+section.explorando {
+    background: url(../images/background3.png);
+    background-size: cover;
+    padding: 15vw;
+}
+
+section.explorando h2 {
+    font-size: 5rem;
+    padding-bottom: 18px;
+    color: #f8f5ea;
+}
+
+section.explorando p {
+    padding: 10px;
+    font-size: 2rem;
+    color: #301d03;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; 
+        padding: 2vw;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin: 5px 0;
+    }
+
+    header nav a,
+    header a.marcado {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    section.banner {
+        padding: 20vw 5vw; 
+    }
+
+    section.banner span h1 {
+        font-size: 8vw; 
+        margin: 10px 0;
+    }
+
+    section.banner p a button {
+        padding: 20px 30px;
+        margin: 5vw 2vw;
+        font-size: 0.8rem;
+    }
+
+    section.introducao {
+        margin: 20px 20px;
+    }
+
+    section.introducao h2 {
+        font-size: 5vw;
+        margin: 50px 0;
+    }
+
+    section.introducao div {
+        flex-direction: column; 
+        margin: 20px 0;
+        gap: 10px;
+    }
+
+    section.introducao span p {
+        font-size: 1.5rem;
+    }
+
+    section.introducao p {
+        font-size: 1rem;
+    }
+
+    section.introducao img {
+        max-width: 80%; 
+    }
+
+    .motivacao-conteudo div img {
+        max-width: 40%;
+    }
+
+    .motivacao-conteudo {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .texto-grande {
+        font-size: 10vw;
+        text-align: center; 
+    }
+
+    .disciplina-cursiva {
+        font-size: 12vw;
+        position: static; 
+        margin-top: 10px;
+    }
+
+    section.disc {
+        margin: 20px 20px;
+    }
+
+    section.disc h2 {
+        font-size: 5vw;
+        padding-bottom: 5rem;
+    }
+
+    section.disc div {
+        flex-direction: column; 
+    }
+
+    section.disc img {
+        max-width: 80%;
+        padding: 10px;
+    }
+
+    section.disc p {
+        font-size: 1.5rem;
+    }
+
+    section.explorando {
+        padding: 20vw 5vw;
+    }
+
+    section.explorando h2 {
+        font-size: 3rem;
+    }
+
+    section.explorando p {
+        font-size: 1.5rem;
+    }
+}
+
+footer {
+    background-color: #1b0a02;
+    color: #b4b4a2;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+}

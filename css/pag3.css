@@ -1,0 +1,354 @@
+html {
+    background-color: #dcd5cf;
+}
+
+a {
+    text-decoration: none;
+}
+header nav a:hover {
+      background-color: #b4b383;
+      color: #1b0a02;
+    }
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 1vw 1vw 1vw;
+    align-items: center;
+    background-color: #1b0a02;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+header nav li {
+    margin: 0px 10px 0px 10px;
+}
+
+header nav a {
+    color: #7f7e5c;
+    display: block;
+    border: 2px solid #b4b383;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+header a.marcado {
+    border: 2px solid #b4b383;
+    background-color: #683d049c;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: block;
+    padding: 10px 20px;
+}
+
+section.estudoEficiente {
+    background: url(../images/background7.png);
+    padding: 10vw;
+    background-size: cover;
+    text-align: center;
+}
+
+section.estudoEficiente div {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+section.estudoEficiente h1 {
+    font-size: 5rem;
+    padding-bottom: 18px;
+    margin: 2vw 2vw;
+    color: #f4efe5;
+    font-weight: bolder;
+}
+
+section.estudoEficiente p {
+    padding: 10px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+section.estudoEficiente p.destaque {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: #3a1b01;
+    padding: 20px 20px;
+    color: #ffffff;
+    display: inline-block; 
+    border-radius: 5px;
+    margin-top: 5vw;
+}
+
+section.estudoEficiente p.destaque span {
+    color: #e6ffa6;
+}
+
+section.montarRotina {
+    background: url(../images/fundoBalanca.png);
+    background-size: cover;
+    padding: 10vw;
+    text-align: center;
+}
+
+section.montarRotina h2 {
+    font-size: 3rem;
+    padding-bottom: 18px;
+    margin: 1vw 1vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #333;
+    font-weight: bolder;
+}
+
+section.montarRotina p.sub {
+    font-size: 1.5rem;
+    margin: 3vw 2vw;
+    padding: 5px;
+    border-radius: 10px;
+    color: #000000;
+    display: inline-block; 
+    background-color: #e0fe9c;
+}
+
+section.montarRotina p.definaHorarios {
+    text-shadow: 1px 1px 1px #333;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+section.montarRotina p.sombra {
+    text-shadow: 1px 1px 1px #a5b57c;
+    font-size: 2rem;
+}
+
+section.montarRotina p {
+    margin: 10px 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+section.metodos {
+    background: url(../images/fundoFlor.png);
+    padding: 8vw;
+    background-size: cover;
+    text-align: center; 
+}
+
+section.metodos h2 {
+    font-size: 3rem;
+    padding-bottom: 18px;
+    margin: 1vw 1vw;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+section.metodos p {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #e0fe9c;
+    margin-bottom: 2vw;
+    display: block; 
+}
+
+section.metodos p img {
+    border-radius: 10px;
+    margin-top: 2vw;
+    max-width: 100%; 
+    height: auto;
+}
+
+section.discDif {
+    background: url(../images/fundoFlorDoc.png);
+    padding: 10vw;
+    background-size: cover;
+    text-align: center;
+}
+
+section.discDif h2 {
+    font-size: 5rem;
+    padding-bottom: 18px;
+    margin: 1vw 1vw;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+section.discDif p.sub {
+    padding: 10px;
+    font-size: 2.5rem;
+    color: #9bbe94;
+    text-shadow: 1px 1px 1px #035009;
+    margin: 2vw 2vw;
+}
+
+section.discDif p {
+    padding: 10px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+section.revisao {
+    background-color: #1b0a02;
+    padding: 4vw 4vw;
+    text-align: center; 
+}
+
+section.revisao div {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+}
+
+section.revisao h2 {
+    font-size: 6rem;
+    padding-bottom: 18px;
+    margin: 1vw 1vw;
+    color: #fbf7ba;
+}
+
+section.revisao p {
+    padding: 10px;
+    font-size: 2.7rem;
+    text-shadow: 1px 1px 1px #404d22;
+    color: #a5b57c;
+}
+
+section.revisao img {
+    max-width: 100%; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; 
+        padding: 2vw;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin: 5px 0; 
+    }
+
+    header nav a,
+    header a.marcado {
+        padding: 8px 15px; 
+        font-size: 0.9rem;
+    }
+
+    section.estudoEficiente {
+        padding: 20vw 5vw;
+    }
+
+    section.estudoEficiente h1 {
+        font-size: 3rem;
+    }
+
+    section.estudoEficiente p {
+        font-size: 1.5rem;
+    }
+
+    section.estudoEficiente p.destaque {
+        font-size: 1.2rem;
+        padding: 15px;
+        margin-top: 10vw;
+    }
+
+    section.montarRotina {
+        padding: 15vw 5vw;
+    }
+
+    section.montarRotina h2 {
+        font-size: 2rem;
+    }
+
+    section.montarRotina p.sub {
+        font-size: 1.2rem;
+        margin: 5vw 0;
+    }
+
+    section.montarRotina p.definaHorarios {
+        font-size: 1rem;
+    }
+
+    section.montarRotina p.sombra {
+        font-size: 1.5rem;
+    }
+
+    section.montarRotina p {
+        font-size: 1.2rem;
+        margin: 5px 10px;
+    }
+
+    section.metodos {
+        padding: 15vw 5vw;
+    }
+
+    section.metodos h2 {
+        font-size: 2rem;
+    }
+
+    section.metodos p {
+        font-size: 1.2rem;
+    }
+
+    section.metodos p img {
+        margin-top: 5vw;
+        max-width: 80%; 
+    }
+
+    section.discDif {
+        padding: 15vw 5vw;
+    }
+
+    section.discDif h2 {
+        font-size: 3rem;
+    }
+
+    section.discDif p.sub {
+        font-size: 2rem;
+    }
+
+    section.discDif p {
+        font-size: 1.5rem;
+    }
+
+    section.revisao {
+        padding: 10vw 5vw;
+    }
+
+    section.revisao h2 {
+        font-size: 4rem;
+    }
+
+    section.revisao p {
+        font-size: 2rem;
+    }
+
+    section.revisao div {
+        flex-direction: column; 
+    }
+
+    section.revisao img {
+        max-width: 50%; 
+    }
+}
+footer {
+    background-color: #1b0a02;
+    color: #b4b4a2;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+}

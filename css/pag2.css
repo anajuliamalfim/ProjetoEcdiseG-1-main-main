@@ -1,0 +1,337 @@
+html {
+    background-color: #dcd5cf;
+}
+
+a {
+    text-decoration: none;
+}
+header nav a:hover {
+      background-color: #b4b383;
+      color: #1b0a02;
+    }
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 1vw 1vw 1vw;
+    align-items: center;
+    background-color: #1b0a02;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+header nav li {
+    margin: 0px 10px 0px 10px;
+}
+
+header nav a {
+    color: #7f7e5c;
+    display: block;
+    border: 2px solid #b4b383;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+header a.marcado {
+    border: 2px solid #b4b383;
+    background-color: #683d049c;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: block;
+    padding: 10px 20px;
+}
+
+section.corpo {
+    background: url(../images/fundoIntrCorpo.png);
+    background-size: cover;
+    padding: 10vw;
+    text-align: center; 
+}
+
+section.corpo h1 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+section.corpo h2 {
+    padding: 10px;
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+section.corpo h2 span {
+    font-weight: bolder;
+}
+
+section.corpo p {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+section.tecnicasFoco {
+    background-color: #4b5b21;
+    padding: 10vw;
+    text-align: center;
+}
+
+section.tecnicasFoco h2 {
+    font-size: 5rem;
+    padding-bottom: 18px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+section.tecnicasFoco p {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+section.tecnicasFoco img {
+    max-width: 20%;
+    margin: 2vw 3vw;
+    padding: 1vw 1vw;
+    border: 2px solid #6d8c66;
+    border-radius: 20px;
+}
+
+section.distracoes {
+    background: #e6e6e6;
+    padding: 10vw;
+}
+
+section.distracoes h2 {
+    font-size: 4rem;
+    padding-bottom: 2vw;
+    text-align: center; 
+}
+
+section.distracoes p.sub {
+    font-size: 1.5rem;
+    background-color: #b1c188;
+    display: inline-block; 
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    margin: 3vw 2vw;
+}
+
+section.distracoes ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+section.distracoes ul li {
+    text-align: center;
+    margin-top: 2vw;
+    padding: 4vw;
+    background: url(../images/backgroundLista.png);
+    border-radius: 20px;
+    font-size: 1.5rem;
+    color: white;
+    border: 2px solid #702c04;
+    flex: 1; 
+    min-width: 200px; 
+}
+
+section.motivacaoCorpo {
+    background: url(../images/fundoMotivacao.png);
+    background-size: cover;
+    padding: 10vw;
+    text-align: center;
+}
+
+section.motivacaoCorpo h2 {
+    font-size: 7rem;
+    padding-bottom: 2vw;
+    color: #ffffff;
+}
+
+section.motivacaoCorpo p span {
+    padding: 10px;
+    font-size: 2rem;
+    color: #e0fe9c;
+}
+
+section.motivacaoCorpo p {
+    padding: 2vw 2vw;
+    font-size: 2.7rem;
+    color: #ffffff;
+}
+
+section.celebrando {
+    background: url(../images/fundoCelebrando.png);
+    background-size: cover;
+    padding: 8vw;
+    text-align: center;
+}
+
+section.celebrando h2 {
+    font-size: 5rem;
+    padding-bottom: 18px;
+    color: #5d4131;
+    font-weight: bolder;
+}
+
+section.celebrando p.passo {
+    padding: 10px;
+    display: block;
+    border-radius: 50px;
+    font-size: 2rem;
+    color: #2c1d00;
+    background-color: rgb(230, 229, 229);
+    margin: 0 auto; 
+    max-width: 80%;
+}
+
+section.celebrando img {
+    margin-top: 3vw;
+    max-width: 18%;
+    border-radius: 20px;
+}
+
+section.celebrando p.supercombo {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #593a33;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; 
+        padding: 2vw;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin: 5px 0; 
+    }
+
+    header nav a,
+    header a.marcado {
+        padding: 8px 15px; 
+        font-size: 0.9rem;
+    }
+
+    section.corpo {
+        padding: 20vw 5vw;
+    }
+
+    section.corpo h1 {
+        font-size: 1.2rem;
+    }
+
+    section.corpo h2 {
+        font-size: 2.5rem;
+    }
+
+    section.corpo p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    section.tecnicasFoco {
+        padding: 15vw 5vw;
+    }
+
+    section.tecnicasFoco h2 {
+        font-size: 3rem;
+    }
+
+    section.tecnicasFoco p {
+        font-size: 1.2rem;
+    }
+
+    section.tecnicasFoco img {
+        max-width: 40%; 
+        margin: 5vw 0;
+        display: block; 
+    }
+
+    section.distracoes {
+        padding: 15vw 5vw;
+    }
+
+    section.distracoes h2 {
+        font-size: 2.5rem;
+    }
+
+    section.distracoes p.sub {
+        font-size: 1.2rem;
+        margin: 5vw 0;
+    }
+
+    section.distracoes ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    section.distracoes ul li {
+        padding: 5vw;
+        font-size: 1.2rem;
+        margin-top: 1vw;
+    }
+
+    section.motivacaoCorpo {
+        padding: 20vw 5vw;
+    }
+
+    section.motivacaoCorpo h2 {
+        font-size: 4rem;
+    }
+
+    section.motivacaoCorpo p span {
+        font-size: 1.5rem;
+    }
+
+    section.motivacaoCorpo p {
+        font-size: 2rem;
+    }
+
+    section.celebrando {
+        padding: 15vw 5vw;
+    }
+
+    section.celebrando h2 {
+        font-size: 3rem;
+    }
+
+    section.celebrando p.passo {
+        font-size: 1.5rem;
+        max-width: 90%;
+    }
+
+    section.celebrando img {
+        max-width: 50%;
+        margin-top: 5vw;
+    }
+
+    section.celebrando p.supercombo {
+        font-size: 1rem;
+    }
+}
+
+footer {
+    background-color: #1b0a02;
+    color: #b4b4a2;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+}

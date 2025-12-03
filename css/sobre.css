@@ -1,0 +1,319 @@
+
+html {
+    background-color: #dcd5cf;
+}
+
+a {
+    text-decoration: none;
+}
+header nav a:hover {
+      background-color: #b4b383;
+      color: #1b0a02;
+    }
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 1vw 1vw 1vw;
+    align-items: center;
+    background-color: #1b0a02;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+header nav li {
+    margin: 0px 10px 0px 10px;
+}
+
+header nav a {
+    color: #7f7e5c;
+    display: block;
+    border: 2px solid #b4b383;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+header a.marcado {
+    border: 2px solid #b4b383;
+    background-color: #683d049c;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: block;
+    padding: 10px 20px;
+}
+.equipe {
+     background-color: #f7f3aa;
+    padding: 10vw;
+    text-align: center;
+
+}
+section.equipe h1 {
+    font-size: 7rem;
+    padding-bottom: 18px;
+    margin: 2vw 2vw;
+    color: #3a1b01;
+    font-weight: bolder;
+}
+
+section.equipe p {
+    padding: 10px;
+    font-size: 2.5rem;
+    color: #3a1b01;
+        margin: 2vw 2vw;
+    background-color: #f7f3aa;
+}
+
+.quemSomos {
+    background-color: #f7f3aa;
+    padding: 10vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20vw;
+}
+
+.quemSomos p {
+    padding: 10px;
+    font-size: 2.5rem;
+    color: #3a1b01;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 1264px;
+    height: 500px;
+    overflow: hidden;
+    background-color: #e1d584;
+
+}
+
+.slider h1 {
+    font-size: 2rem;
+}
+.slider p {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.slides {
+    
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 400px;
+    float:left;
+}
+
+.manualNav {
+    position: absolute;
+    width: 1200px;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.manualButton {
+    border: 4px solid #ffffff;
+    padding: 7px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manualButton:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manualButton:hover {
+    background-color: #ffffff;
+}
+
+#radio1:checked~.first {
+    margin-inline-end: 20%;
+}
+
+#radio2:checked~.first {
+    margin-left: -24.5%;
+}
+
+#radio3:checked~.first {
+    margin-left: -49.5%;
+}
+
+#radio4:checked~.first {
+    margin-left: -74.5%;
+}
+
+#radio5:checked~.first {
+    margin-left: -99.5%;
+}
+
+.navegação div {
+    border: 4px solid #ffffff;
+    padding: 7px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.navegação  {
+    position: absolute;
+    width: 1200px;
+    margin-top: 435px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegação div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navegação .autoButton1 {
+    background-color: #ffffff;
+}
+
+#radio2:checked ~ .navegação .autoButton2 {
+    background-color: #ffffff;
+}
+
+#radio3:checked ~ .navegação .autoButton3 {
+    background-color: #ffffff;
+}
+
+#radio4:checked ~ .navegação .autoButton4 {
+    background-color: #ffffff;
+}
+
+#radio5:checked ~ .navegação .autoButton5 {
+    background-color: #ffffff;
+}
+
+.sobreProjeto {
+    padding: 5vw;
+    text-align: center;
+}
+
+.sobreProjeto h1 {
+    font-size: 3rem;
+    padding-bottom: 2px;
+    margin: 2vw 2vw;
+        background-color: #b19463 op;
+
+
+}
+
+.sobreProjeto p {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #000000;
+        margin: 2vw 2vw;
+}
+
+footer {
+    background-color: #1b0a02;
+    color: #b4b4a2;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .equipe h1 {
+        font-size: 3rem;
+    }
+    .equipe p, .quemSomos p {
+        font-size: 1.2rem;
+    }
+    .slider {
+        width: 95%;
+        height: 400px;
+    }
+    .slide img {
+        width: 150px;
+    }
+    .quemSomos {
+        gap: 3vw;
+    }
+    .quemSomos p {
+        max-width: 60%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .equipe {
+        padding: 10vw 5vw;
+    }
+    .equipe h1 {
+        font-size: 2rem;
+    }
+    .equipe p, .quemSomos p {
+        font-size: 1rem;
+    }
+    .quemSomos {
+        flex-direction: column;
+        gap: 2vw;
+        padding: 10vw 5vw;
+    }
+    .quemSomos p {
+        max-width: 100%;
+    }
+    .quemSomos img {
+        max-width: 80%;
+    }
+    .slider {
+        width: 100%;
+        height: 300px;
+    }
+    .slide {
+        padding: 0.5rem;
+    }
+    .slide img {
+        width: 100px;
+    }
+    .slider h1 {
+        font-size: 1.2rem;
+    }
+    .slider p {
+        font-size: 0.9rem;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    footer {
+        padding: 1rem 0.5rem;
+    }
+    footer img {
+        width: 15px;
+    }
+}

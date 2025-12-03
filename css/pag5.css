@@ -1,0 +1,336 @@
+html {
+    background-color: #dcd5cf;
+}
+
+a {
+    text-decoration: none;
+}
+
+header nav a:hover {
+      background-color: #b4b383;
+      color: #1b0a02;
+    }
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 1vw 1vw 1vw;
+    align-items: center;
+    background-color: #1b0a02;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+header nav li {
+    margin: 0px 10px 0px 10px;
+}
+
+header nav a {
+    color: #7f7e5c;
+    display: block;
+    border: 2px solid #b4b383;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+header a.marcado {
+    border: 2px solid #b4b383;
+    background-color: #683d049c;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: block;
+    padding: 10px 20px;
+}
+
+section.feRelaTrab {
+    background: url(../images/fundoFeTrab.png);
+    background-size: cover;
+    padding: 13vw;
+    text-align: center;
+}
+
+section.feRelaTrab p {
+    padding: 10px;
+    font-size: 1.4rem;
+    color: #69443c;
+}
+
+section.feRelaTrab h1 {
+    font-size: 4rem;
+    padding-bottom: 18px;
+    margin: 2vw 2vw;
+    color: #fff8f6;
+    text-shadow: 2px 2px 2px #333;
+    font-weight: bolder;
+}
+
+section.feRelaTrab p.sub {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: #c5ae98;
+    padding: 20px 20px;
+    color: #ffffff;
+    display: inline-block; 
+    border-radius: 50px;
+    margin-top: 5vw;
+}
+
+.vidaAdolescente {
+    background: url(../images/FundoPomba.png);
+    padding: 10vw 10vw;
+    background-size: cover;
+    text-align: center;
+}
+
+.vidaAdolescente p {
+    font-size: 3rem;
+    padding-bottom: 18px;
+    margin: 2vw 2vw;
+    color: #f6f2e1;
+    text-shadow: 1px 1px 1px #3a1b01;
+}
+
+section.areaVida {
+    background-color: #4b5b21;
+    padding: 5vw 5vw;
+    text-align: center;
+}
+
+section.areaVida h2 {
+    font-size: 7rem;
+    padding-bottom: 18px;
+    margin: 2vw 2vw;
+    color: #3a1b01;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+section.areaVida ol {
+    padding: 10px;
+    font-size: 2.5rem;
+    margin: 2vw 2vw;
+    color: #ffffff;
+}
+
+section.areaVida ol li p {
+    text-shadow: 2px 2px 2px #000000;
+}
+
+section.areaVida img {
+    border-radius: 90px;
+    border: 3px solid #3a1b01;
+    max-width: 100%; 
+    height: auto;
+}
+
+section.objetivos {
+    background: url(../images/fundoAAB.png);
+    padding: 15vw 10vw;
+    background-size: cover;
+}
+
+section.objetivos h2 {
+    font-size: 5rem;
+    padding-bottom: 18px;
+    margin: 2vw 2vw;
+    color: #3a1b01;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #ffffff;
+}
+
+section.objetivos ul li {
+    display: flex;
+    margin: 3vw 3vw;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+section.objetivos ul li p {
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bolder;
+    flex: 1; 
+    min-width: 200px; 
+}
+
+section.beneficios {
+    background-color: #8f703d;
+    padding: 5vw 5vw;
+    background-size: cover;
+    text-align: center;
+}
+
+section.beneficios h2 {
+    font-size: 5rem;
+    padding-bottom: 18px;
+    margin: 2vw 2vw;
+    color: #e4e0e0;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #3a1b01;
+}
+
+section.beneficios ul li {
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    margin: 20px 20px;
+    background-color: #a78d65;
+}
+
+section.beneficios ul li p {
+    margin: 2vw 2vw;
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: #462912;
+    font-weight: bolder;
+}
+
+section.beneficios p.cuidados {
+    font-size: 2rem;
+    color: rgb(224, 222, 222);
+    text-shadow: 1px 1px 1px #3a1b01;
+    margin-bottom: 3vw;
+}
+
+section.beneficios p.passo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: #3a1b01;
+    padding: 20px 20px;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: 5vw;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; 
+        padding: 2vw;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin: 5px 0; 
+    }
+
+    header nav a,
+    header a.marcado {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    section.feRelaTrab {
+        padding: 20vw 5vw;
+    }
+
+    section.feRelaTrab p {
+        font-size: 1.2rem;
+    }
+
+    section.feRelaTrab h1 {
+        font-size: 2.5rem;
+    }
+
+    section.feRelaTrab p.sub {
+        font-size: 1.2rem;
+        padding: 15px;
+        margin-top: 10vw;
+    }
+
+    section.vidaAdolescente {
+        padding: 15vw 5vw;
+    }
+
+    section.vidaAdolescente p {
+        font-size: 2rem;
+        padding-bottom: 10px;
+        margin: 5vw 0;
+    }
+
+    section.areaVida {
+        padding: 10vw 5vw;
+    }
+
+    section.areaVida h2 {
+        font-size: 4rem;
+    }
+
+    section.areaVida ol {
+        font-size: 1.8rem;
+        margin: 5vw 0;
+    }
+
+    section.areaVida img {
+        max-width: 80%; 
+        margin: 10px auto;
+    }
+
+    section.objetivos {
+        padding: 20vw 5vw;
+    }
+
+    section.objetivos h2 {
+        font-size: 3rem;
+    }
+
+    section.objetivos ul li {
+        flex-direction: column; 
+        margin: 5vw 0;
+    }
+
+    section.objetivos ul li p {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+        min-width: auto; 
+    }
+
+    section.beneficios {
+        padding: 10vw 5vw;
+    }
+
+    section.beneficios h2 {
+        font-size: 3rem;
+    }
+
+    section.beneficios ul li {
+        margin: 10px 10px;
+    }
+
+    section.beneficios ul li p {
+        font-size: 1.5rem;
+        margin: 5vw 0;
+        padding: 10px 15px;
+    }
+
+    section.beneficios p.cuidados {
+        font-size: 1.5rem;
+        margin-bottom: 5vw;
+    }
+
+    section.beneficios p.passo {
+        font-size: 1.2rem;
+        padding: 15px;
+        margin-top: 10vw;
+    }
+}
+
+footer {
+    background-color: #1b0a02;
+    color: #b4b4a2;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+}
